@@ -1,16 +1,25 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import React from 'react'
+import AxiosHome from './Pages/AxiosHome'
+import AxiosAbout from './Pages/AxiosAbout'
+import { Routes,Route } from 'react-router-dom'
+import NavBar from './NavBar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-   <h1>rajesh</h1>
-    </>
+    <div>
+      <NavBar></NavBar>
+      <Routes>
+      <Route path='/' element = {<AxiosHome/>}></Route>
+       <Route path='/about' element = {<AxiosAbout/>}></Route>
+      </Routes>
+    </div>
   )
 }
 
 export default App
+
+
